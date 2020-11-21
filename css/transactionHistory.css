@@ -1,0 +1,27 @@
+.table-container{
+    overflow-x:auto;
+}
+
+a{
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+table {
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: orange;
+}
+
+td, th {
+    border-bottom: 1px solid black;
+    padding: 10px 40px;
+}
+
+td:first-child, th:first-child {
+    padding: 10px;
+}

@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  input[type=text],  input[type=number], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: textfield;
+  }
+  
+  .button-submit {
+    background-color: orange;
+    color: white;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+
+  input[type=file] {
+    display: none;
+  }
+
+  .custom-file-upload {
+    background-color: orange;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 6px 12px;
+    width: 180px;
+    margin-top: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  #form-label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  .form-label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  #form-label-recipe {
+    font-size: 13px;
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+  }
+  
+  .input-recipe{
+    height: 25px;
+
+  }
+  .error-msg{
+    color:red;
+  }
+
+  .button-submit:hover {
+    background-color: rgb(255, 198, 92);
+  }
+
+  input[type=text]:hover, input[type=number]:hover {
+    border-color: orange;
+  }
+
+  textarea:hover{
+    border-color: orange;
+  }
+
+  input[type=text]:focus, input[type=number]:focus {
+    border-color: orange;
+  }
+
+  textarea:focus{
+    border-color: orange;
+  }
+  
+  .col-20 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+  }
+  
+  .col-80 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

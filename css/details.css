@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  padding: 10px;
+  height: 300px;
+}
+
+.col-30 {
+  padding: 10px;
+  float: left;
+  flex: 30%;
+  margin-top: 6px;
+}
+
+.col-70 {
+  padding: 10px;
+  float: left;
+  flex: 70%;
+  margin-top: 6px;
+}
+
+.details-container {
+  margin-top: 70px;
+}
+
+.details-content {
+  margin-right: 60px;
+}
+
+.button-container{
+  align-items: flex-end;
+  position: relative;
+}
+
+.buy-button{
+  position: absolute;
+  right: 10px;
+  margin-top:10%;
+  min-height: 40px;
+  min-width: 150px;
+  background-color: orange;
+  font-size: 20px;
+  color: white
+}
+
+.detail-img{
+  border: solid;
+  border-width: 2px;
+  border-color: orange;
+  border-radius: 10px;
+  height: 250px;
+
+}

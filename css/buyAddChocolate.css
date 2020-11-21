@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    padding: 10px;
+    height: 300px;
+  }
+  
+  .col-30 {
+    padding: 10px;
+    float: left;
+    flex: 30%;
+    margin-top: 6px;
+  }
+
+  .col-inc-dec{
+    float: left;
+    flex: 30%;
+  }
+
+  .col-amount-buy-num {
+    text-align: center;
+    float: left;
+    width: 130px;
+  }
+  
+  .col-70 {
+    padding: 10px;
+    float: left;
+    flex: 70%;
+    margin-top: 6px;
+  }
+
+  .col-50 {
+    float: left;
+    flex: 50%;
+    margin-top: 10px;
+  }
+
+  .col-100 {
+    float: left;
+    flex: 100%;
+    margin-top: 8px;
+  }
+
+  .amount-to-buy-container{
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    width: 70%;
+    height: 80%;
+    margin-top: -10px;
+    padding: 2px 5px 0px;
+  }
+
+  .amount-buy-button{
+    background-color: orange;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+  }
+
+  #dec-button{
+    float: left;
+  }
+
+  #inc-button{
+    float: right;
+  }
+
+  input[type=number] {
+    border: none;
+    text-align: center;
+    appearance: textfield;
+    margin-left: 10px;
+    width: 55%;
+  }
+
+  #amount-buy-num{
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+  }
+
+  
+  #total-price{
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+  }
+
+  #total-price-num{
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+  }
+
+  .details-container {
+    margin-top: 70px;
+  }
+  
+  .details-content {
+    margin-right: 60px;
+  }
+
+  h5{
+      margin-top:-10px;
+  }
+
+  p{
+      margin-top:-20px;
+  }
+
+  #button-container{
+      align-items: flex-end;
+      position: relative;
+      margin-top: 80px;
+  }
+
+  .button-submit {
+    position: absolute;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    right: 10px;
+    margin-top:10%;
+    min-height: 40px;
+    min-width: 150px;
+    background-color: orange;
+    font-size: 20px;
+    color: white;
+  }
+
+  #button-search {
+    font-family: Lato, Helvetica, sans-serif;
+    background-color: white;
+    color: orange;
+    border: none;
+    padding: 5px;
+    transition: 0.2s;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+  .button-submit:hover {
+    background-color: rgb(255, 198, 92);;
+  }
+
+  .button-submit:disabled {
+    background-color: #ccc;
+  }
+
+  .cancel-button{
+    position: absolute;
+    right: 180px;
+    margin-top:10%;
+    min-height: 40px;
+    min-width: 150px;
+    background-color: #ccc;
+    font-size: 20px;
+  }
+
+  .cancel-button:hover{
+      background-color: rgb(231, 230, 230);
+  }
+  
+  .detail-img{
+    border: solid;
+    border-width: 2px;
+    border-color: orange;
+    border-radius: 10px;
+    width: 250px;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 80px;
+    resize: none;
+  }
+
+  textarea:hover{
+    border-color: orange;
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .col-amount-buy-num {
+      width: 100px;
+    }
+
+    .amount-to-buy-container{
+      width: 100px;
+    }
+  }
+
+  
+  

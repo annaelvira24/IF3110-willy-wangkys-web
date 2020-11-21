@@ -1,0 +1,42 @@
+.result-container {
+	display: flex;
+	flex-flow: column;
+	/* margin-top: 20px; */
+}
+
+a{
+  color: darkgoldenrod;
+  text-decoration: none;
+}
+
+.result-card {
+	display: flex;
+	flex-flow: row;
+	text-align: left;
+	order: 1;
+	flex-grow: 1;
+	border:  1px solid #ccc;
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.result-card:nth-child(n+6) {
+	display: none;
+}
+
+.img-settings {
+	text-align: left;
+	width: 200px;
+	height: 200px;
+
+}
+
+.result-content {
+	margin-left: 20px;
+}
+
+p{
+	margin-top: -5px;
+	font-size: 14px;
+}

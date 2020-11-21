@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    font-family: Lato, Helvetica, sans-serif;
+}
+
+body {
+    background-color:whitesmoke;
+}
+
+.company-name {
+    border: 1px solid orange;
+    background-color: white;
+    height: 100px;
+    width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#login-form {
+    border: 1px solid #ccc;
+    height: 280px;
+    width: 500px;
+    margin: auto;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+#register-form {
+    border: 1px solid #ccc;
+    height: 450px;
+    width: 500px;
+    margin: auto;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.label-wrapper {
+    display: block;
+    margin: auto;
+}
+
+.input-form-wrapper {
+    display: block;
+    margin: 10px 0px;
+    height: 30px;
+    width: 460px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-form-wrapper:hover, .input-form-wrapper:focus {
+    border-color: orange;
+}
+
+.submit-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin: auto;
+    margin-top: 50px;
+    height: 50px;
+    width: 460px;
+    font-size: 24px;
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: rgb(255, 198, 92);
+}
+
+.register-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 20px;
+    width: 250px;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.register-btn:hover {
+    background-color: rgb(255, 198, 92);
+}
+
+#username-err {
+    font-size: 14px;
+}
+
+#email-err {
+    font-size: 14px;
+}
