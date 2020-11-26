@@ -20,7 +20,6 @@
       header('Location: dashboard.php');
     }
 
-    // if($_SERVER["REQUEST_METHOD"] == "GET"){
       $product_id = mysqli_real_escape_string($conn, $_GET["id"]);
       $product_id = intval($product_id);
       $query = mysqli_query($conn, "SELECT * FROM product WHERE id_product = $product_id");
@@ -32,13 +31,23 @@
       $amount = $row["stock"];
       $desc = $row["description"];
       $image = $row["image_path"];
-    // }
+    
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {      
       $message_err = "";
       $amount_buy = trim($_POST["amount"]);
       $address = trim($_POST["address"]);
-      // $id_user = 2;
+      
+      $client = new SoapClient("http://localhost:8080/web_service_factory/services/AddBalance?wsdl");
+
+      $params = array(
+        "add" => $amount_buy * $price,
+      );
+
+      $response = $client->__soapCall("AddBalance", array($params));
+
+      // // Print WS response
+      // var_dump($response);
      
       $sql =
       "INSERT INTO transaction(id_product, id_user, amount_purchased, total_price, date_purchased, address)
