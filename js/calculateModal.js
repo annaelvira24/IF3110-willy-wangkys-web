@@ -8,7 +8,8 @@ function calcAllPrice(e, arr){
     console.log(arr, typeof arr)
 
     for(var i=0; i<arr.length; i++){
-        amount = document.getElementById(i).value;
+        let id = "bahan"+i;
+        amount = document.getElementById(id).value;
         console.log(amount)
 
         price = arr[i].harga_satuan;     

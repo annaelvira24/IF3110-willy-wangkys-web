@@ -34,7 +34,7 @@
                             }
 
 
-                            setcookie('tokenized', $r, time()+300);
+                            setcookie('tokenized', $r, time()+3000);
                             header('Location: dashboard.php');
                         }
                         else {
