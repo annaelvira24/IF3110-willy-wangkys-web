@@ -34,20 +34,28 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $amount_add = trim($_POST["amount"]);
-     
+      
+      $client = new SoapClient("http://localhost:8080/web_service_factory/services/ReqAddStock?wsdl");
 
-      $sql =
-      "UPDATE product
-      SET stock = stock + $amount_add
-      WHERE id_product = $product_id;";
+      $params = array(
+        "productId" => $product_id,
+        "amount" => $amount_add,
+      );
+
+      $response = $client->__soapCall("ReqAddStock", array($params));
+
+      // $sql =
+      // "UPDATE product
+      // SET stock = stock + $amount_add
+      // WHERE id_product = $product_id;";
     
-      if(mysqli_query($conn, $sql)){
-        header('Location: detailsPage.php?id=' . $id);
-        close();
-      }
-      else{
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-      }
+      // if(mysqli_query($conn, $sql)){
+      //   header('Location: detailsPage.php?id=' . $id);
+      //   close();
+      // }
+      // else{
+      //   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      // }
 
     }
 
