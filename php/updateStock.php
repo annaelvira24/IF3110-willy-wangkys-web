@@ -6,20 +6,30 @@ require_once "connectDatabase.php";
       header('Location: loginAccount.php');
     }
 
-    $token = $_COOKIE['tokenized'];
-    $searchUser = "SELECT * FROM users WHERE token = '$token'";
-    $searchUserSQL = mysqli_query($conn, $searchUser);
-    $row = mysqli_fetch_assoc($searchUserSQL);
-    
-    $id_user = $row['id_user'];
-    $id_user = intval($id_user);
-    $role = $row["category"];
+    $check_stat_query = mysqli_query($conn, "SELECT id_addstock, id_product, amount FROM addStock WHERE status = 'Pending'");
+    while ($stat_row = mysqli_fetch_assoc($check_stat_query)){
+        $client = new SoapClient("http://localhost:8080/web_service_factory/services/GetApprovalStatus?wsdl");
 
-    if($role != "user") {
-      echo "Restricted";
-      header('Location: dashboard.php');
+        $id_addstock =  $stat_row["id_addstock"];
+        $id_product =  $stat_row["id_product"];
+        $amount_add =  $stat_row["amount"];
+
+
+        $params = array(
+            "addStockId" => $id_addstock,
+        );
+
+      $res = $client->__soapCall("GetApprovalStatus", array($params));
+
+      $status_now = (get_object_vars($res)["return"]);
+      if($status_now == "Delivered"){
+          mysqli_query($conn, "UPDATE addStock SET status = 'Delivered' WHERE id_addstock = $id_addstock");
+          mysqli_query($conn, "UPDATE product SET stock = stock + $amount_add WHERE id_product = $id_product");
+      }
+
     }
     
+
     $product_id = mysqli_real_escape_string($conn, $_GET["id"]);
     $product_id = intval($product_id);
     $query = mysqli_query($conn, "SELECT * FROM product WHERE id_product = $product_id");
@@ -38,9 +48,6 @@ require_once "connectDatabase.php";
         <title>Buy Chocolate</title>
         <link rel="stylesheet" type="text/css" href="../css/buyAddChocolate.css">
         <link rel="stylesheet" type="text/css" href="../css/pageTemplate.css">
-        <!-- <script src="../js/buyChocolate.js"></script> -->
-        <!-- <script src="../js/chocolateUpdate.js"></script> -->
-
     </head>
 
     <body>

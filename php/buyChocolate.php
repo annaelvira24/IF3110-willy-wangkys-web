@@ -46,8 +46,6 @@
 
       $response = $client->__soapCall("AddBalance", array($params));
 
-      // // Print WS response
-      // var_dump($response);
      
       $sql =
       "INSERT INTO transaction(id_product, id_user, amount_purchased, total_price, date_purchased, address)
@@ -81,8 +79,6 @@
     </script>
     <script src="../js/buyChocolate.js"></script>
     <script src="../js/chocolateUpdate.js"></script>
-
-
 </head>
 
 <body>

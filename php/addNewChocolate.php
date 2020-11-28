@@ -93,8 +93,7 @@ else{
             $success = 1;
             move_uploaded_file($_FILES['image']['tmp_name'],$target_dir);
             header('Location: dashboard.php');
-            exit();
-            
+            exit();     
         } 
         else {
             echo "Error: " . $query . "<br>" . mysqli_error($conn);

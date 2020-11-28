@@ -37,6 +37,8 @@
     <title>Chocolate Details</title>
     <link rel="stylesheet" type="text/css" href="../css/details.css">
     <link rel="stylesheet" type="text/css" href="../css/pageTemplate.css">
+
+    <script src="../js/chocolateUpdate.js"></script>
 </head>
 
 <body>
@@ -86,7 +88,7 @@
       </div>
       <div class="col-70">
         <div class="details-container">
-          <div class="details-content">
+          <div class="details-content" id = "details">
             <h4>Amount sold: <?php echo $sold?></h4>
             <h4>Price: Rp<?php echo number_format($price, 2, ',', '.'); ?></h4>
             <h4>Amount: <?php echo $amount?></h4>
