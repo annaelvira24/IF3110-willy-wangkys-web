@@ -60,35 +60,32 @@ else{
       $row = mysqli_fetch_assoc(mysqli_query($conn, $searchProductId));
       $id_product = $row['max(id_product)'];
       $id_product = intval($id_product);
+      $id_product = $id_product + 1;
 
         
       $client = new SoapClient("http://localhost:8080/web_service_factory/services/AddProduct?wsdl");
 
       $params = array(
-        "productId" => $id_product + 1,
+        "productId" => $id_product,
         "productName" => $name,
         "stock" => $amount,
       );
-
-      print_r($params);
 
       $client->__soapCall("AddProduct", array($params));
       
       for ($i = 0; $i<count($ingredient); $i++){
         $client = new SoapClient("http://localhost:8080/web_service_factory/services/AddRecipe?wsdl");
         $params = array(
-          "productId" => $id_product + 1,
-          "ingredientId" => $ingredient[$i],
+          "productId" => $id_product,
+          "ingredientId" => $ingredient[$i] + 1,
           "amountNeed" => $amountNeed[$i],
         );
-  
-        print_r($params);
   
         $client->__soapCall("AddRecipe", array($params));
       }
 
-        $query = "INSERT INTO product(product_name, price, amount_sold, stock, description, image_path) 
-        values('".$name."', '".$price."', 0, '".$amount."', '".$desc."', '".$target_dir_db."')";
+        $query = "INSERT INTO product(id_product, product_name, price, amount_sold, stock, description, image_path) 
+        values('".$id_product."','".$name."', '".$price."', 0, '".$amount."', '".$desc."', '".$target_dir_db."')";
         if (mysqli_query($conn, $query)) {
             $success = 1;
             move_uploaded_file($_FILES['image']['tmp_name'],$target_dir);
@@ -167,7 +164,7 @@ else{
                   <label id = "form-label-recipe">'. $result[$i]->nama_bahan .'</label>
                 </div>
                 <div class="col-80">
-                  <input class = "input-recipe" type="number" min="0" value = "0" step="0.1" name='. $for_name .' id= '. $for_name .'  required>
+                  <input class = "input-recipe" type="number" min="0" value = "0" step="1" name='. $for_name .' id= '. $for_name .'  required>
                 </div>
               </div>';
             }
