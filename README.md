@@ -31,8 +31,10 @@ Willy Wangky's Web adalah aplikasi berbasis website yang dibuat menggunakan HTML
 ## Pembagian Tugas
 
 ### REST
-1. Transaksi bahan baku dengan Factory Management Pro : 13518020
-2. Memberi daftar bahan yang dijual :
+1. Menerima input untuk transaksi bahan baku dengan Factory Management Pro : 13518020
+2. Memberikan respon jumlah uang hasil transaksi beserta status berhasil pada transakti bahan baku : 13518020
+3. Memberikan respon jumlah uang yang kurang agar transaksi berhasil beserta status gagal : 13518020
+4. Memberi daftar bahan yang dijual : 13518045
 
 ### SOAP
 1. Login dan Logout : 13518045
@@ -56,7 +58,7 @@ Willy Wangky's Web adalah aplikasi berbasis website yang dibuat menggunakan HTML
 7. Membeli bahan dari supplier : 13518020
 8. Melihat daftar resep coklat : 13518045
 9. Melihat daftar coklat yang tersedia di pabrik : 13518045
-10. Melihat saldo pabrik : 13518045
+10. Melihat saldo pabrik : 13518020
 11. Memproduksi cokelat dari bahan mentah : 13518045
 
 ### Perubahan Willy Wangkys Web
