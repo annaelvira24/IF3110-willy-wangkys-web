@@ -60,6 +60,7 @@ Willy Wangky's Web adalah aplikasi berbasis website yang dibuat menggunakan HTML
 9. Melihat daftar coklat yang tersedia di pabrik : 13518045
 10. Melihat saldo pabrik : 13518020
 11. Memproduksi cokelat dari bahan mentah : 13518045
+12. Menampilkan status transaksi pembelian bahan : 13518050
 
 ### Perubahan Willy Wangkys Web
 1. Perubahan Tampilan Halaman Add New Chocolate : 13518045
