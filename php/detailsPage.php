@@ -37,7 +37,9 @@
     <title>Chocolate Details</title>
     <link rel="stylesheet" type="text/css" href="../css/details.css">
     <link rel="stylesheet" type="text/css" href="../css/pageTemplate.css">
-
+    <script>
+      var id = <?php echo $product_id;?>;
+    </script>
     <script src="../js/chocolateUpdate.js"></script>
 </head>
 

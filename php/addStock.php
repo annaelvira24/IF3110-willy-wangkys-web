@@ -44,18 +44,16 @@
 
       $response = $client->__soapCall("ReqAddStock", array($params));
 
-      // $sql =
-      // "UPDATE product
-      // SET stock = stock + $amount_add
-      // WHERE id_product = $product_id;";
+      $sql =
+      "INSERT INTO addstock (id_product, amount, status) VALUES ('".$product_id."', '".$amount_add."', 'Pending')";
     
-      // if(mysqli_query($conn, $sql)){
-      //   header('Location: detailsPage.php?id=' . $id);
-      //   close();
-      // }
-      // else{
-      //   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-      // }
+      if(mysqli_query($conn, $sql)){
+        header('Location: detailsPage.php?id=' . $id);
+        close();
+      }
+      else{
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
 
     }
 
@@ -67,7 +65,11 @@
     <title>Add Stock</title>
     <link rel="stylesheet" type="text/css" href="../css/buyAddChocolate.css">
     <link rel="stylesheet" type="text/css" href="../css/pageTemplate.css">
+    <script>
+      var id = <?php echo $product_id;?>;
+    </script>
     <script src="../js/addStock.js"></script>
+    <script src="../js/chocolateUpdate.js"></script>
 </head>
 
 <body>
