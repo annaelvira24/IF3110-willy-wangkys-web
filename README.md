@@ -25,8 +25,8 @@ Willy Wangky's Web adalah aplikasi berbasis website yang dibuat menggunakan HTML
 ![](screenshot/AddStock.png)
 
 ### Add New Chocolate
-![](screenshot/AddNew1.png)
-![](screenshot/AddNew2.png)
+![](screenshot/addNew1.png)
+![](screenshot/addNew2.png)
 
 ## Pembagian Tugas
 
@@ -36,28 +36,28 @@ Willy Wangky's Web adalah aplikasi berbasis website yang dibuat menggunakan HTML
 
 ### SOAP
 1. Login dan Logout : 13518045
-2. Menambahkan jenis cokelat baru + resep :
-3. Menambahkan permintaan add stock baru : 
-4. Mengembalikan status dari permintaan add stock :
-5. Melakukan pembuatan coklat tertentu dengan jumlah tertentu, yaitu mengubah bahan tidak kedaluwarsa dalam stok gudang Factory menjadi coklat (yang masih berada dalam gudang Factory) dan mengurangi bahan dalam gudang apabila bahan cukup :
-6. Mengubah status permintaan add stock, dalam artian melakukan pengiriman terhadap toko Willy Wangky.
-Menambah saldo yang pada Factory :
-7. Mengembalikan saldo yang dimiliki pada Factory :
-8. Menambahkan bahan dalam gudang : 
+2. Menambahkan jenis cokelat baru + resep : 13518045
+3. Menambahkan permintaan add stock baru : 13518045
+4. Mengembalikan status dari permintaan add stock : 13518045
+5. Melakukan pembuatan coklat tertentu dengan jumlah tertentu, yaitu mengubah bahan tidak kedaluwarsa dalam stok gudang Factory menjadi coklat (yang masih berada dalam gudang Factory) dan mengurangi bahan dalam gudang apabila bahan cukup : 13518045
+6. Mengubah status permintaan add stock, dalam artian melakukan pengiriman terhadap toko Willy Wangky : 13518045
+7. Menambah saldo yang pada Factory : 13518020
+8. Mengembalikan saldo yang dimiliki pada Factory : 13518020
+9. Menambahkan bahan dalam gudang : 13518020
 
 
 ### ReactJs
 1. Login : 13518045
 2. Halaman Utama : 13518045
-3. Memberikan approval terhadap pesanan coklat dari WWWeb :
-4. Melihat daftar pemesanan coklat dari WWWeb :
-5. Melihat daftar bahan yang tersedia di pabrik :
-6. Melihat daftar harga bahan yang tersedia di supplier :
-7. Membeli bahan dari supplier :
-8. Melihat daftar resep coklat :
-9. Melihat daftar coklat yang tersedia di pabrik :
-10. Melihat saldo pabrik :
-11. Memproduksi cokelat dari bahan mentah :
+3. Memberikan approval terhadap pesanan coklat dari WWWeb : 13518045
+4. Melihat daftar pemesanan coklat dari WWWeb : 13518045
+5. Melihat daftar bahan yang tersedia di pabrik : 13518045
+6. Melihat daftar harga bahan yang tersedia di supplier : 13518020
+7. Membeli bahan dari supplier : 13518020
+8. Melihat daftar resep coklat : 13518045
+9. Melihat daftar coklat yang tersedia di pabrik : 13518045
+10. Melihat saldo pabrik : 13518045
+11. Memproduksi cokelat dari bahan mentah : 13518045
 
 ### Perubahan Willy Wangkys Web
 1. Perubahan Tampilan Halaman Add New Chocolate : 13518045
